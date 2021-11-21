@@ -1,0 +1,200 @@
+# Base16 Black Metal (Bathory) - xaskpass color config
+# metalelf0 (https://github.com/metalelf0)
+
+# By default sizes are pixels when screen height <= 1080. Otherwise they are 1/1080 of the
+# screen height. This can be changed with dialog.scale.
+
+title = 'xaskpass'
+# Try to grab keyboard but back off if it cannot be done.
+grab_keyboard = false
+show_hostname = false
+resizable = false
+# setting this to other than 32 uses the root depth
+depth = 32
+
+[dialog]
+foreground = '#c1c1c1'
+background = '#000000'
+indicator_label_foreground = '#c1c1c1'
+# set to 'none' to use pango default font and size. Use mono to keep ssh
+# fingerprint formatting.
+font = 'mono 11'
+#font = 'sans serif 11'
+# To force the use of a specific font file. Improves the startup time a lot.
+#font_file = '/usr/share/fonts/TTF/DejaVuSansMono.ttf'
+font_file = 'none'
+# one of 'Ltr', 'Rtl', 'Neutral', 'WeakLtr', 'WeakRtl' or 'none' to derive from
+# keymap
+direction = 'none'
+# affected by label text direction
+alignment = 'Left'
+# the default label when none is given as an argument
+label = 'Please enter your authentication passphrase:'
+# set to 'none' to disable timeout
+input_timeout = 30
+indicator_label = 'Secret:'
+scale = 'none'
+
+[dialog.layout_opts]
+# one of Center, TopRight, BottomLeft, MiddleCompact
+layout = 'Center'
+# Sizes are in pixels. Fractional numbers can be used instead of integers but these
+# might result in blurry lines. 'none' to calculate from font height.
+horizontal_spacing = 'none'
+vertical_spacing = 'none'
+# set to 'none' to disable wrapping
+text_width = 'none'
+
+[dialog.ok_button]
+foreground = '#c1c1c1'
+border_color = '#121212'
+border_color_pressed = '#121212'
+background = '#222222'
+# set to a color for a linear gradient
+background_pressed = '#333333'
+background_hover = '#333333'
+label = 'OK'
+horizontal_spacing = 'none'
+vertical_spacing = 'none'
+border_width = 1.0
+# set both to 0 to disable rounding
+radius_x = 0
+radius_y = 0
+# 3D look:
+pressed_adjustment_x = 1.0
+pressed_adjustment_y = 1.0
+background_stop = 'none'
+background_pressed_stop = 'none'
+background_hover_stop = 'none'
+
+[dialog.cancel_button]
+foreground = '#c1c1c1'
+border_color = '#121212'
+border_color_pressed = '#121212'
+background = '#222222'
+background_pressed = '#333333'
+background_hover = '#333333'
+label = 'Cancel'
+horizontal_spacing = 'none'
+vertical_spacing = 'none'
+border_width = 1.0
+# set both to 0 to disable rounding
+radius_x = 0
+radius_y = 0
+# 3D look:
+pressed_adjustment_x = 1.0
+pressed_adjustment_y = 1.0
+background_stop = 'none'
+background_pressed_stop = 'none'
+background_hover_stop = 'none'
+
+[dialog.clipboard_button]
+foreground = '#c1c1c1'
+border_color = '#121212'
+border_color_pressed = '#121212'
+background = '#222222'
+background_pressed = '#333333'
+background_hover = '#333333'
+horizontal_spacing = 'none'
+vertical_spacing = 'none'
+border_width = 1.0
+# set both to 0 to disable rounding
+radius_x = 0
+radius_y = 0
+# 3D look:
+pressed_adjustment_x = 1.0
+pressed_adjustment_y = 1.0
+background_stop = 'none'
+background_pressed_stop = 'none'
+background_hover_stop = 'none'
+
+[dialog.plaintext_button]
+label = 'abc'
+horizontal_spacing = 'none'
+vertical_spacing = 'none'
+border_width = 1.0
+# set both to 0 to disable rounding
+radius_x = 0
+radius_y = 0
+# 3D look:
+pressed_adjustment_x = 1.0
+pressed_adjustment_y = 1.0
+background_stop = 'none'
+background_pressed_stop = 'none'
+background_hover_stop = 'none'
+
+[dialog.indicator]
+foreground = '#c1c1c1'
+background = '#333333'
+border_color = '#121212'
+border_color_focused = '#aaaaaa'
+indicator_color = '#333333'
+border_width = 1.0
+background_stop = 'none'
+indicator_color_stop = 'none'
+# only implemented for circle for now
+blink = true
+# One of 'Classic', 'Circle' or 'Strings'
+type = 'Circle'
+
+[dialog.indicator.classic]
+min_count = 3
+max_count = 3
+# set to 0 to disable rounding
+radius_x = 0
+radius_y = 0
+# Set to 'none' to derive from text height
+horizontal_spacing = 'none'
+element_height = 'none'
+element_width = 'none'
+
+[dialog.indicator.circle]
+lock_color = '#333333'
+# 'none' to derive from text width
+diameter = 'none'
+light_up = true
+rotate = true
+rotation_speed_start = 0.10
+rotation_speed_gain = 1.05
+# angle in radians
+spacing_angle = 0.5
+indicator_count = 3
+# 'none' to derive from diameter
+indicator_width = 'none'
+
+[dialog.indicator.strings]
+radius_x = 0
+radius_y = 0
+horizontal_spacing = 'none'
+vertical_spacing = 'none'
+# one of 'Custom', 'Disco' or 'Asterisk'
+strings = 'Asterisk'
+
+[dialog.indicator.strings.disco]
+min_count = 3
+max_count = 20
+# to use three states to differentiate between adding a letter and deleting one
+three_states = false
+
+[dialog.indicator.strings.custom]
+# one of 'Left', 'Center' or 'Right'
+alignment = 'Center'
+justify = false
+randomize = true
+# to differentiate between different states specify at least 3 or 4 strings
+# first string indicates paste
+strings = [
+  'pasted 🤯',
+  '(っ-̶●̃益●̶̃)っ ,︵‿ ',
+  '(⊙.⊙(☉̃ₒ☉)⊙.⊙)',
+  'ʕ•́ᴥ•̀ʔっ',
+  'ヽ(´ー`)人(´∇｀)人(`Д´)ノ',
+]
+
+[dialog.indicator.strings.asterisk]
+asterisk = "*"
+# one of 'Left', 'Center' or 'Right'
+alignment = 'Center'
+min_count = 10
+max_count = 20
+
